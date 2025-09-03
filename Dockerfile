@@ -24,4 +24,4 @@ LABEL org.opencontainers.image.title="badradio-stremio-addon" \
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD wget -qO- http://localhost:${PORT}/manifest.json >/dev/null || exit 1
 USER node
-CMD ["node", "dist/index.js"]
+ENTRYPOINT ["node", "dist/index.js"]
