@@ -1,7 +1,7 @@
 {
   "name": "badradio-stremio-addon",
   "version": "1.0.0",
-  "description": "Stremio addon providing the badradio 24/7 stream with current track metadata",
+  "description": "Stremio addon providing badradio 24/7 with current track metadata",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",

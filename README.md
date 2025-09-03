@@ -1,6 +1,6 @@
 # badradio Stremio Addon
 
-Simple Stremio addon that exposes the [badradio](https://badradio.nz) 24/7 live stream and displays the current track as the item title.
+Simple Stremio addon that exposes the [badradio](https://badradio.nz) 24/7 stream and displays the current track as the item title.
 
 ## Features
 
