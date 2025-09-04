@@ -40,7 +40,9 @@ async function fetchStatus(): Promise<RadioStatus | null> {
   }
 }
 
-const manifest: Manifest = {
+const manifest: Manifest & {
+  stremioAddonsConfig: { issuer: string; signature: string };
+} = {
   id: "com.sleeyax.badradio",
   version: "1.0.0",
   name: "badradio",
@@ -57,6 +59,11 @@ const manifest: Manifest = {
       name: "badradio",
     },
   ],
+  stremioAddonsConfig: {
+    issuer: "https://stremio-addons.net",
+    signature:
+      "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..kSKxOQFhRAFnRxBpi7wAJQ.KoSvBnB9u19WsTheb8_HLCRjy5oL49XxcaOEJQ_7S9YIG6gA39QVZKRob0J5y9s4ZBBAZ4P3oxdwCs-eB3sStcInwcCJ0pIZJS0JXvLGJlqIytGgJyrJKXaps1LSw6TH.buxoJDrTiWYoRnFduEn1aQ",
+  },
 };
 
 async function handleCatalog(): Promise<{ metas: MetaPreview[] }> {
